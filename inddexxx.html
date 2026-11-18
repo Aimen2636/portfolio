@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aimen Ejaz | AI Student building toward Robotics</title>
+<meta name="description" content="Aimen Ejaz, BS Artificial Intelligence student at UAJK, building AI that will move beyond screens. Robotics is the future.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFBF5;
+  --ink:#121212;
+  --accent:#FF6B35;
+  --muted:#5b5650;
+  --line:#e6dccd;
+  --head:"Space Grotesk",system-ui,sans-serif;
+  --body:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --hand:"Caveat",cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{max-width:100%;overflow-x:hidden}
+body{
+  background-color:var(--bg);
+  /* subtle paper grain, tiny inline SVG noise */
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .28 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:15px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{width:min(100% - 2.5rem,1040px);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);font-weight:700;line-height:1.05;letter-spacing:-.02em}
+
+/* ticker */
+.ticker{background:var(--ink);color:var(--bg);overflow:hidden;white-space:nowrap;font-size:13px;padding:.55rem 0;position:relative}
+.ticker-track{display:inline-flex;animation:run 38s linear infinite;will-change:transform}
+.ticker span{padding-right:3rem}
+.ticker b{color:var(--accent);font-weight:500}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* hello */
+.hello{padding:clamp(3rem,9vw,7rem) 0 clamp(3rem,7vw,5rem)}
+.hello-grid{display:grid;gap:2.5rem;grid-template-columns:1fr;align-items:center}
+.note{font-family:var(--hand);font-size:1.6rem;color:var(--accent);line-height:1.1;display:block;transform:rotate(-2deg);margin-bottom:.9rem}
+h1{font-size:clamp(2.9rem,12.5vw,6.6rem);overflow-wrap:anywhere}
+.tagline{margin-top:1.4rem;font-size:clamp(1rem,2.8vw,1.15rem);max-width:34ch;font-weight:500}
+.tagline em{font-style:normal;background:linear-gradient(transparent 62%,rgba(255,107,53,.35) 62%)}
+.about{margin-top:1.4rem;max-width:56ch;color:var(--muted)}
+.meta{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;font-size:13px}
+.meta span::before{content:"";display:inline-block;width:.5rem;height:.5rem;background:var(--accent);border-radius:50%;margin-right:.5rem}
+.hand{width:min(78%,300px);justify-self:center;color:var(--ink)}
+.hand svg{width:100%;height:auto;display:block}
+.hand .cap{font-family:var(--hand);font-size:1.35rem;color:var(--accent);text-align:center;margin-top:.3rem;transform:rotate(2deg)}
+@media(min-width:820px){
+  .hello-grid{grid-template-columns:1.5fr 1fr}
+  .hand{width:100%;max-width:320px}
+}
+
+/* sections */
+section{padding:clamp(2.5rem,6vw,4.5rem) 0}
+h2{font-size:clamp(1.9rem,6vw,3rem);margin-bottom:.6rem}
+.sub{font-family:var(--hand);font-size:1.45rem;color:var(--accent);margin-bottom:2rem;line-height:1.1}
+
+/* work */
+.work{display:grid;gap:1.5rem;grid-template-columns:1fr}
+.card{border:2px solid var(--ink);background:var(--bg);padding:1.6rem 1.4rem;position:relative;box-shadow:6px 6px 0 var(--accent)}
+.card h3{font-size:clamp(1.35rem,4.5vw,1.8rem);margin-bottom:.4rem}
+.stack{display:inline-block;font-size:12.5px;color:var(--ink);border-bottom:2px solid var(--accent);margin-bottom:1rem}
+.card p{color:var(--muted);max-width:52ch}
+.card .tag{font-family:var(--hand);font-size:1.3rem;color:var(--accent);margin-top:1rem;display:block;line-height:1.1}
+@media(min-width:820px){
+  .work{grid-template-columns:1fr 1fr;gap:2.2rem}
+  .card:nth-child(2){margin-top:2.5rem}
+}
+
+/* skills */
+.skills{display:flex;flex-wrap:wrap;gap:.7rem}
+.skills li{list-style:none;border:1.5px solid var(--ink);padding:.35rem .9rem;border-radius:999px;font-size:13.5px;background:var(--bg)}
+.skills li.hot{background:var(--ink);color:var(--bg)}
+.skills-note{margin-top:1.6rem;font-family:var(--hand);font-size:1.5rem;color:var(--accent);line-height:1.15}
+
+/* vision */
+.vision{border-top:2px dashed var(--line);border-bottom:2px dashed var(--line)}
+.vision p.big{font-family:var(--head);font-weight:700;font-size:clamp(1.5rem,5.5vw,2.6rem);line-height:1.15;letter-spacing:-.02em;max-width:24ch}
+
+/* contact */
+.contact h2{font-size:clamp(1.8rem,6.5vw,3.4rem);max-width:18ch}
+.contact p{max-width:50ch;color:var(--muted);margin-bottom:1.8rem}
+.btn{display:inline-block;background:var(--accent);color:var(--ink);font-family:var(--body);font-weight:500;font-size:15px;text-decoration:none;padding:.95rem 1.5rem;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.mail{display:block;margin-top:1.4rem;font-size:14px;overflow-wrap:anywhere}
+.mail a{border-bottom:2px solid var(--accent);text-decoration:none}
+.contact p.links{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;margin:1.4rem 0 0;color:var(--ink);font-size:14px}
+.links a{text-decoration:none;border-bottom:2px solid var(--accent)}
+footer{padding:2rem 0 3rem;font-size:12.5px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem}
+
+@media(max-width:380px){body{font-size:14px}.card{padding:1.3rem 1.1rem}}
+@media(prefers-reduced-motion:reduce){
+  .ticker{white-space:normal;text-align:center}
+  .ticker-track{animation:none}
+  .ticker-track span:last-child{display:none}
+  html{scroll-behavior:auto}
+  .btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ticker" role="marquee" aria-label="building AI that will move beyond screens, robotics is the future, available for remote internships">
+  <div class="ticker-track" aria-hidden="true">
+    <span>building AI that will move beyond screens <b>→</b> robotics is the future <b>→</b> Available for remote internships <b>→</b></span>
+    <span>building AI that will move beyond screens <b>→</b> robotics is the future <b>→</b> Available for remote internships <b>→</b></span>
+  </div>
+</div>
+
+<main>
+  <header class="hello" id="hello">
+    <div class="wrap hello-grid">
+      <div>
+        <span class="note">hello, I’m</span>
+        <h1>AIMEN EJAZ</h1>
+        <p class="tagline">building AI that will move beyond screens → <em>robotics is the future</em></p>
+        <p class="about">I’m a BS Artificial Intelligence student in my 3rd semester at the University of Azad Jammu and Kashmir (UAJK). I work with open-source language models and audio AI, and I’m learning to ship secure, end-to-end software. My goal is robotics.</p>
+        <div class="meta">
+          <span>Muzaffarabad, Azad Kashmir</span>
+          <span>UAJK, 3rd semester</span>
+        </div>
+      </div>
+      <div class="hand" aria-hidden="true">
+        <svg viewBox="0 0 240 260" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+          <!-- wrist -->
+          <path d="M82 258v-40h76v40"/>
+          <!-- palm -->
+          <path d="M70 218V150c0-8 5-14 12-14h76c7 0 12 6 12 14v68z"/>
+          <!-- fingers -->
+          <rect x="72" y="52" width="26" height="86" rx="13"/>
+          <rect x="102" y="30" width="26" height="108" rx="13"/>
+          <rect x="132" y="46" width="26" height="92" rx="13"/>
+          <rect x="162" y="72" width="24" height="66" rx="12"/>
+          <!-- thumb -->
+          <path d="M70 176c-22-6-38-22-44-44-3-10 9-16 16-8 8 10 18 18 28 22"/>
+          <!-- joints -->
+          <path d="M72 96h26M102 82h26M132 92h26M162 110h24" stroke-width="2"/>
+          <!-- touch sensors -->
+          <g fill="#FF6B35" stroke="none">
+            <circle cx="85" cy="62" r="6"/>
+            <circle cx="115" cy="40" r="6"/>
+            <circle cx="145" cy="56" r="6"/>
+            <circle cx="174" cy="82" r="6"/>
+            <circle cx="40" cy="134" r="6"/>
+          </g>
+        </svg>
+        <p class="cap">hands that can feel</p>
+      </div>
+    </div>
+  </header>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>Selected Work</h2>
+      <p class="sub">two projects so far, more with moving parts soon</p>
+      <div class="work">
+        <article class="card">
+          <h3>Deep Fake Voice Detector</h3>
+          <span class="stack">Python &amp; Audio AI</span>
+          <p>Designed an audio verification tool that detects synthetic and manipulated voice deepfakes, using acoustic feature extraction to spot AI-generated voice spoofs.</p>
+          <span class="tag">teaching machines to listen carefully</span>
+        </article>
+        <article class="card">
+          <h3>Interactive Funny Chatbot</h3>
+          <span class="stack">Meta Llama LLM</span>
+          <p>Built a lightweight conversational chatbot on an open-source Llama model, with custom system prompts and persona tuning to give it a sense of humor.</p>
+          <span class="tag">a personality, not just answers</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <p class="sub">the toolbox I’m building with</p>
+      <ul class="skills">
+        <li class="hot">Python</li>
+        <li class="hot">C++</li>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>VS Code</li>
+        <li class="hot">Llama (Meta Open-Source LLM)</li>
+        <li class="hot">Audio Signal Processing</li>
+        <li>Prompt Engineering</li>
+      </ul>
+      <p class="skills-note">C++ and signal processing are my road to robotics.</p>
+    </div>
+  </section>
+
+  <section class="vision" id="vision">
+    <div class="wrap">
+      <h2>My Vision</h2>
+      <p class="sub">From AI to Robotics</p>
+      <p class="big">I want to take AI out of screens into physical hands that can feel.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>let’s have a coffee, virtually? ☕</h2>
+      <p>I’m open to remote internships and to anyone building with AI, audio or robotics. Send a message and let’s talk.</p>
+      <a class="btn" href="mailto:aimenejazkiani@gmail.com?subject=Let%E2%80%99s%20build%20a%20smart%20bot">Let’s Build a Smart Bot →</a>
+      <span class="mail"><a href="mailto:aimenejazkiani@gmail.com">aimenejazkiani@gmail.com</a></span>
+      <p class="links">
+        <a href="https://www.linkedin.com/in/aimen-kiani-22bb353a2" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Aimen2636" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Aimen Ejaz, Muzaffarabad, Azad Kashmir</span>
+    <span>BS AI, UAJK</span>
+  </div>
+</footer>
+
+</body>
+</html>
